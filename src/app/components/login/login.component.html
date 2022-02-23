@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <h1>Log In FUINCO</h1>
+        </div>
+        <form #f="ngForm">
+          <div class="mb-3">
+            <label ngModel name="email" class="form-label" >Email address</label>
+            <input ngModel name="email" type="email" class="form-control" email>
+            <div *ngIf="f.invalid" class="alert alert-danger" >Please enter valid email</div>
+            </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input ngModel name="password"  type="password" class="form-control" >
+          </div>
+          <button type="submit" routerLink="/list" class="btn btn-primary">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
